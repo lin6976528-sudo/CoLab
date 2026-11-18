@@ -1,0 +1,6 @@
+{
+  "name": "CoLab",
+  "description": "A comprehensive suite of AI tools powered by Gemini, including chat, image generation, video generation, and audio processing.",
+  "requestFramePermissions": ["camera", "microphone", "geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

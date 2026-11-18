@@ -1,0 +1,894 @@
+{
+  "common": {
+    "aboutColab": "關於 CoLab",
+    "dbSynced": "離線存檔已同步",
+    "dbSyncing": "正在備份至本地...",
+    "dbError": "本地備份失敗",
+    "dbLoading": "載入本地中...",
+    "readyToHelp": "我隨時待命",
+    "inputPlaceholderGemini": "問問 Gemini",
+    "share": "分享",
+    "searchTools": "搜尋工具...",
+    "searchGlobal": "全域搜尋",
+    "searchGlobalPlaceholder": "搜尋 AI 功能、工具或對話歷程紀錄...",
+    "searchGlobalPlaceholderShort": "搜尋功能、歷史紀錄...",
+    "voiceSearch": "語音搜尋",
+    "listening": "正在聆聽語音指令...",
+    "heard": "識別到",
+    "voiceSelected": "已自動選取",
+    "speechNotSupported": "您的瀏覽器不支援 Web Speech API。請使用 Google Chrome 獲得完整體驗。",
+    "speechNotAllowed": "請允許麥克風權限以使用語音搜尋",
+    "speechError": "語音識別出錯，請再試一次",
+    "noToolsFound": "找不到符合「{{query}}」的工具",
+    "provideFeedback": "提供回饋",
+    "tutorial": "使用教學",
+    "submitFeedback": "送出回饋",
+    "submitting": "送出中...",
+    "rateResponse": "滿意此回饋與生成品質嗎？",
+    "rateLike": "非常好",
+    "rateDislike": "有待改進",
+    "qualityGood": "優質",
+    "qualityBad": "不滿意",
+    "rateThanksLike": "感謝您的肯定！我們會持續保持良好品質。",
+    "rateThanksDislike": "已收到您的回饋，系統將持續調整以改善生成效果。",
+    "cancel": "取消",
+    "back": "返回",
+    "backToDashboard": "返回儀表板",
+    "feedbackSuccess": "感謝您的回饋！",
+    "feedbackSuccessDesc": "您的意見將幫助我們持續改進 {{feature}}。",
+    "feedbackQuestion": "您對「{{feature}}」的體驗如何？",
+    "thumbsUp": "很好用",
+    "thumbsDown": "需要改進",
+    "feedbackDetails": "告訴我們更多細節（選填）",
+    "feedbackPlaceholder": "您喜歡什麼？有什麼可以做得更好？",
+    "gotIt": "我知道了",
+    "steps": "操作步驟",
+    "tips": "實用提示",
+    "building": "功能建置中",
+    "errors": {
+      "quota": {
+        "title": "超出配額限制",
+        "message": "您已達到 API 配額上限。",
+        "suggestion": "請稍後再試，或檢查您的 Google Cloud 帳單設定。"
+      },
+      "auth": {
+        "title": "身分驗證失敗",
+        "message": "API 金鑰無效或遺失。",
+        "suggestion": "請檢查您的 API 金鑰設定。如果需要，請確保您已選擇有效的付費 Google Cloud 專案 API 金鑰。"
+      },
+      "safety": {
+        "title": "內容被封鎖",
+        "message": "請求或回應被安全過濾器封鎖。",
+        "suggestion": "請嘗試修改您的提示詞，使其更符合安全規範。"
+      },
+      "network": {
+        "title": "網路錯誤",
+        "message": "無法連接到伺服器。",
+        "suggestion": "請檢查您的網路連線並重試。"
+      },
+      "notFound": {
+        "title": "找不到資源",
+        "message": "請求的模型或資源無法使用。",
+        "suggestion": "所選模型可能暫時無法使用或已棄用。請嘗試選擇其他模型。"
+      },
+      "default": {
+        "title": "發生未知的錯誤",
+        "message": "處理您的請求時發生意外錯誤。",
+        "suggestion": "請稍後再試或修改您的輸入內容。"
+      }
+    },
+    "categories": {
+      "Overview": "Overview",
+      "Text & Chat": "Text & Chat",
+      "Image": "Image",
+      "Video": "Video",
+      "Audio": "Audio"
+    },
+    "imageSizeLimit": "圖片大小不能超過 10MB",
+    "confirmClearChat": "確定要清除對話紀錄嗎？",
+    "confirmDeleteChat": "確定要刪除這筆對話嗎？",
+    "confirmDeleteMessage": "確定要刪除這條訊息嗎？",
+    "deleteMessage": "刪除此訊息",
+    "chatHistory": "對話紀錄",
+    "recent": "最近",
+    "recentActivity": "最近活動",
+    "noRecentActivity": "目前尚無最近活動紀錄。",
+    "justNow": "剛剛",
+    "minsAgo": "{{count}}分鐘前",
+    "hoursAgo": "{{count}}小時前",
+    "daysAgo": "{{count}}天前",
+    "chatTranscript": "對話紀錄",
+    "sidebarDynamic": {
+      "rarelyUsedTools": "低頻使用 AI 功能",
+      "groupedHint": "已根據您的日常使用習慣自動智慧收折",
+      "enableLabel": "開啟使用頻率智慧分組",
+      "resetLabel": "清除功能點擊頻率數據",
+      "usageCount": "已使用 {{count}} 次",
+      "resetSuccess": "已成功重置功能點擊數據"
+    },
+    "metricsWidget": {
+      "title": "作用中 AI 響應速率與延遲監測",
+      "latencyLabel": "首字生成延遲",
+      "tpsLabel": "生成輸出速率",
+      "seconds": "秒",
+      "tpsUnit": "代幣/秒 (tps)",
+      "speedRating": "速度能效評級",
+      "extremelyFast": "極致瞬秒 (Extremely Fast)",
+      "standardFast": "高速輕盈 (Balanced Fast)",
+      "deepInference": "深度推理 (Pro Inference)",
+      "descPro": "具備頂尖複雜語義推演能力，適用深度分析與極致運算",
+      "descFlash": "秒級流暢回應，泛用度極高之綜合性首選通道",
+      "descLite": "亞秒級即時吞吐，輕量化及邊緣串流反應之最佳載體",
+      "realtimeGenerating": "即時流式解析中...",
+      "activeTracking": "當前對話串流即時指標",
+      "historyRating": "歷史實測基線平均值"
+    },
+    "mention": {
+      "header": "引用 system 功能與歷史對話數據",
+      "noMatches": "找不到符合條件的 AI 工具或歷史對話",
+      "tip": "使用 ↑/↓ 來移動選單，並按 Enter 鍵確定選擇，Esc 即可關閉"
+    },
+    "newChat": "新增對話",
+    "noChatHistory": "找不到對話紀錄。",
+    "all": "全部",
+    "noHistoryFilter": "找不到符合此篩選條件的紀錄。",
+    "searchHistory": "搜尋紀錄...",
+    "noSearchResults": "找不到符合您搜尋的結果。",
+    "processError": "抱歉，處理您的請求時發生錯誤。",
+    "downloadChat": "匯出對話",
+    "exportBackup": "本機備份匯出",
+    "selectFormat": "選擇匯出格式",
+    "exportJson": "JSON 備份檔 (.json)",
+    "exportJsonDesc": "完整結構化對話與中繼資料",
+    "exportText": "純文字檔 (.txt)",
+    "exportTextDesc": "易於閱讀與保存的純文字紀錄",
+    "exportMarkdown": "Markdown 文檔 (.md)",
+    "exportMarkdownDesc": "保留排版與參考連結格式",
+    "exportSuccess": "已匯出本機備份",
+    "pinMessage": "釘選此訊息",
+    "unpinMessage": "取消釘選",
+    "pinnedBadge": "已釘選",
+    "pinnedMessages": "已釘選的重要訊息",
+    "jumpToMessage": "跳轉至此訊息",
+    "clearChat": "清除對話",
+    "startChat": "開始對話...",
+    "referenceSources": "參考來源",
+    "thinking": "思考中...",
+    "inputPlaceholder": "輸入您的訊息...",
+    "login": "登入",
+    "logout": "登出",
+    "loggingOut": "正在登出...",
+    "loggingIn": "正在登入...",
+    "welcomeBack": "歡迎回來",
+    "niceToSeeYou": "很高興再次見到您 ✨",
+    "goodbye": "我們捨不得你離開",
+    "hopeToSeeYou": "希望與您再相見 👋",
+    "pleaseWait": "請稍候片刻",
+    "submit": "送出",
+    "profile": "個人資料",
+    "preferences": "偏好設定",
+    "turboMode": "極速模式 (Turbo Mode)",
+    "turboModeDesc": "動態切換高畫質視覺與極速高效彩現",
+    "save": "儲存",
+    "skip": "跳過",
+    "next": "下一步",
+    "close": "關閉",
+    "last": "完成",
+    "open": "開啟",
+    "imageGen": {
+      "confirmClear": "確定要清除生成的圖片嗎？",
+      "needApiKey": "請先選擇付費的 Google Cloud 專案 API 金鑰。",
+      "noImageGenerated": "未生成圖片，請嘗試其他提示詞。",
+      "generateFailed": "生成圖片失敗。",
+      "clearImage": "清除圖片",
+      "apiKeyRequired": "此模型需要付費的 Google Cloud 專案 API 金鑰。",
+      "selectApiKey": "選擇 API 金鑰",
+      "model": "模型",
+      "modelImagen": "Imagen 3.0 (一般生成)",
+      "modelGeminiFlash": "Gemini 3.1 Flash 圖片預覽 (快速)",
+      "modelGeminiPro": "Gemini 3.0 Pro 圖片預覽 (高品質)",
+      "prompt": "提示詞",
+      "promptGuidance": "提示：具體描述主體、風格、光線、相機視角和氛圍能產生更好的結果。（例如：「一隻賽博龐克狐狸的超寫實特寫肖像，霓虹邊緣光，電影級 85 毫米鏡頭，大氣薄霧」）",
+      "promptPlaceholder": "描述您想生成的圖片...",
+      "aspectRatio": "長寬比",
+      "imageSize": "圖片大小",
+      "generating": "生成中...",
+      "generateImage": "生成圖片",
+      "creatingMasterpiece": "正在創作您的傑作...",
+      "downloadImage": "下載圖片",
+      "notGeneratedYet": "尚未生成圖片",
+      "notGeneratedDesc": "輸入提示詞並點擊生成，結果將顯示於此。"
+    },
+    "videoGen": {
+      "confirmClear": "確定要清除生成的影片嗎？",
+      "needApiKey": "請先選擇付費的 Google Cloud 專案 API 金鑰。",
+      "initializing": "正在初始化生成...",
+      "generating": "正在生成影片... 這可能需要幾分鐘。",
+      "stillGenerating": "仍在生成中... 請稍候。",
+      "fetchError": "無法取得生成的影片。",
+      "noVideoGenerated": "未生成影片。",
+      "generateFailed": "生成影片失敗。",
+      "clearVideo": "清除影片",
+      "apiKeyRequired": "Veo 影片生成需要付費的 Google Cloud 專案 API 金鑰。",
+      "selectApiKey": "選擇 API 金鑰",
+      "prompt": "提示詞",
+      "promptPlaceholder": "描述您想生成的影片...",
+      "referenceImages": "參考圖片 (最多 3 張)",
+      "uploadImage": "上傳圖片",
+      "referenceImageNote": "使用參考圖片時，影片將強制以 720p 解析度與 16:9 比例生成。",
+      "aspectRatio": "長寬比",
+      "aspectRatio16_9": "16:9 (橫向)",
+      "aspectRatio9_16": "9:16 (直向)",
+      "generatingBtn": "生成中...",
+      "generateVideo": "生成影片",
+      "generationNote": "此過程可能需要幾分鐘，請勿關閉頁面。",
+      "downloadVideo": "下載影片",
+      "notGeneratedYet": "尚未生成影片",
+      "notGeneratedDesc": "輸入提示詞並點擊生成以在此查看結果。"
+    },
+    "liveAudio": {
+      "confirmClear": "確定要清除對話紀錄嗎？",
+      "micConnected": "麥克風已連接。正在連接到 AI...",
+      "connected": "已連接到 Gemini Live API。開始說話！",
+      "aiInterrupted": "AI 已中斷。",
+      "connectionError": "發生連接錯誤。",
+      "connectionClosed": "連接已關閉。",
+      "setupFailed": "連接到 Live API 失敗。",
+      "clearLogs": "清除紀錄",
+      "micPermissionNote": "此功能需要麥克風存取權限，並使用 Gemini Live API 進行即時語音互動。",
+      "connecting": "連接中...",
+      "connectedSpeak": "已連接 - 開始說話",
+      "clickToConnect": "點擊連接",
+      "clickToDisconnect": "點擊以斷開連接",
+      "conversationHistory": "對話紀錄",
+      "noConversation": "沒有進行中的對話",
+      "connectToStart": "連接以開始語音對話。"
+    },
+    "animateImage": {
+      "confirmClear": "確定要清除圖片和生成的動畫嗎？",
+      "needApiKey": "請先選擇付費的 Google Cloud 專案 API 金鑰。",
+      "initializing": "正在初始化生成...",
+      "generating": "正在將圖片轉換為動畫... 這可能需要幾分鐘。",
+      "stillGenerating": "仍在生成中... 請稍候。",
+      "fetchError": "無法取得生成的影片。",
+      "noVideoGenerated": "未生成影片。",
+      "generateFailed": "圖片動畫製作失敗。",
+      "clearContent": "清除內容",
+      "apiKeyRequired": "Veo 影片生成需要付費的 Google Cloud 專案 API 金鑰。",
+      "selectApiKey": "選擇 API 金鑰",
+      "uploadImage": "上傳起始圖片",
+      "prompt": "提示詞 (選填)",
+      "promptPlaceholder": "描述圖片應如何產生動畫...",
+      "aspectRatio": "長寬比",
+      "aspectRatio16_9": "16:9 (橫向)",
+      "aspectRatio9_16": "9:16 (直向)",
+      "generatingBtn": "動畫製作中...",
+      "generateVideo": "圖片動畫",
+      "generationNote": "此過程可能需要幾分鐘，請勿關閉頁面。",
+      "downloadVideo": "下載影片",
+      "notGeneratedYet": "尚未生成影片",
+      "notGeneratedDesc": "上傳圖片並點擊動畫製作以在此查看結果。"
+    },
+    "editImage": {
+      "confirmClear": "確定要清除圖片嗎？",
+      "noImageGenerated": "未生成圖片，請嘗試其他提示詞。",
+      "generateFailed": "編輯圖片失敗。",
+      "clearImage": "清除圖片",
+      "uploadImage": "點擊上傳圖片",
+      "uploadNote": "支援 PNG, JPG, WEBP，最大 10MB",
+      "prompt": "提示詞",
+      "editingBtn": "編輯中...",
+      "editImage": "編輯圖片",
+      "editResult": "編輯結果",
+      "processing": "正在施展魔法...",
+      "downloadImage": "下載圖片",
+      "notGeneratedYet": "尚未有編輯結果",
+      "notGeneratedDesc": "上傳圖片，輸入提示詞，然後點擊編輯以在此查看結果。"
+    },
+    "imageUnderstand": {
+      "confirmClear": "確定要清除圖片和分析結果嗎？",
+      "noResult": "未生成分析結果。",
+      "analyzeFailed": "分析圖片失敗。",
+      "clearContent": "清除內容",
+      "uploadImage": "點擊上傳圖片",
+      "uploadNote": "支援 PNG, JPG, WEBP，最大 10MB",
+      "prompt": "提示詞",
+      "analyzingBtn": "分析中...",
+      "analyzeImage": "分析圖片",
+      "analysisResult": "分析結果",
+      "processing": "正在處理圖片...",
+      "notAnalyzedYet": "尚未分析",
+      "notAnalyzedDesc": "上傳圖片並點擊分析，結果將顯示於此。"
+    },
+    "tts": {
+      "confirmClear": "確定要清除生成的語音嗎？",
+      "noSpeechGenerated": "未生成語音。",
+      "generateFailed": "生成語音失敗。",
+      "clearSpeech": "清除語音",
+      "textToSpeech": "文字轉語音",
+      "textPlaceholder": "輸入要轉換為語音的文字...",
+      "voice": "聲音",
+      "generatingBtn": "生成中...",
+      "generateSpeech": "生成語音",
+      "speechOutput": "語音輸出",
+      "synthesizing": "正在合成語音...",
+      "notGeneratedYet": "尚未生成語音",
+      "notGeneratedDesc": "輸入文字並點擊生成以聆聽語音。"
+    },
+    "transcribe": {
+      "confirmClear": "確定要清除語音和轉錄結果嗎？",
+      "micError": "無法存取麥克風。請確保已授予權限。",
+      "noTranscription": "未生成轉錄結果。",
+      "transcribeFailed": "語音轉文字失敗。",
+      "clearContent": "清除內容",
+      "stopRecording": "停止錄音",
+      "startRecording": "錄製語音",
+      "uploadAudio": "上傳音訊",
+      "recordedAudio": "已錄製的語音",
+      "transcribingBtn": "轉錄中...",
+      "transcribeAudio": "語音轉文字",
+      "transcriptionResult": "轉錄結果",
+      "processing": "正在處理語音...",
+      "notTranscribedYet": "尚未轉錄",
+      "notTranscribedDesc": "錄製語音並點擊轉錄，文字將顯示於此。"
+    },
+    "videoUnderstand": {
+      "confirmClear": "確定要清除影片和分析結果嗎？",
+      "noResult": "未生成分析結果。",
+      "analyzeFailed": "分析影片失敗。",
+      "clearContent": "清除內容",
+      "uploadVideo": "點擊上傳影片",
+      "uploadNote": "支援 MP4, WEBM，最大 50MB",
+      "prompt": "提示詞",
+      "analyzingBtn": "分析中...",
+      "analyzeVideo": "分析影片",
+      "analysisResult": "分析結果",
+      "processing": "正在處理影片...",
+      "notAnalyzedYet": "尚未分析",
+      "notAnalyzedDesc": "上傳影片並點擊分析，結果將顯示於此。"
+    }
+  },
+  "dashboard": {
+    "heroTitle1": "探索生成式 AI",
+    "heroTitle2": "的無限可能。",
+    "heroSubtitle": "一個整合文字、圖片、影片與語音生成的統一工作區。選擇下方的工具開始創作。",
+    "takeTour": "觀看功能介紹"
+  },
+  "features": {
+    "three-d-studio": {
+      "title": "3D 互動場景實驗室",
+      "description": "即時 PBR 光照渲染、機械爆炸視圖與雲端場景預設保存",
+      "tutorial": {
+        "title": "如何使用 3D 互動場景實驗室",
+        "steps": [
+          "在下方控制列切換「精密天體儀」、「光之建築亭」或「航太渦輪扇」等複合程式化模型。",
+          "拖曳視窗可自由環繞 (Orbit) 與縮放視角；點擊模型組件可檢視材質與零件規格。",
+          "滑動「爆炸拆解」拉桿可平滑展開各組件位置，也可切換材質塗層與攝影棚光影氛圍。",
+          "點擊「預設集」即可將目前的視角、材質、燈光與拆解進度即時儲存至雲端。"
+        ],
+        "tips": [
+          "按下鍵盤 H 鍵可快速收折/展開控制列，享受純淨的無干擾 3D 展示空間。"
+        ]
+      }
+    },
+    "analytics": {
+      "title": "用量與算力分析",
+      "description": "查看您的 Co 幣消耗與 AI 功能使用統計趨勢圖"
+    },
+    "about": {
+      "title": "關於 CoLab",
+      "subtitle": "CoLab 是一個先進的 AI 協作平台，將 Google 最新生成式模型的強大功能整合到一個統一的工作區中。",
+      "mission": {
+        "title": "我們的使命",
+        "description": "我們相信人工智慧應該是平易近人、直覺的，並能無縫整合到您的創意與專業工作流程中。CoLab 的建立是為了縮短複雜 AI 模型與日常任務之間的距離，為您提供一個乾淨、無干擾的環境來探索、創造與創新。"
+      },
+      "tech": {
+        "gemini": {
+          "title": "Gemini 3.1 Pro",
+          "description": "由 Google 最強大的 AI 模型驅動，專為複雜推理、程式碼編寫與創意任務而設計。"
+        },
+        "veo": {
+          "title": "Veo 影片生成",
+          "description": "使用先進的 Veo 模型，透過文字提示詞建立令人驚豔的高品質影片。"
+        },
+        "secure": {
+          "title": "安全與隱私",
+          "description": "您的資料受到企業級安全與隱私控制的保護。"
+        },
+        "developer": {
+          "title": "開發者友善",
+          "description": "使用 React、Tailwind CSS 和 Firebase 等現代網頁技術建置。"
+        }
+      },
+      "technology": {
+        "title": "核心技術",
+        "description": "CoLab 運用 Gemini API 的尖端能力，提供能同時理解文字、圖片、音訊與影片的多模態模型存取。"
+      },
+      "connect": {
+        "title": "聯絡我們",
+        "description": "有任何問題、回饋，或想參與貢獻嗎？我們很樂意聽聽您的想法。"
+      },
+      "footer": {
+        "copyright": "© {{year}} CoLab 應用程式。保留所有權利。",
+        "version": "版本 1.0.0"
+      }
+    },
+    "dashboard": {
+      "title": "總覽儀表板",
+      "description": "查看所有可用的 AI 工具",
+      "pinnedTools": "⭐ 常用快捷釘選",
+      "pin": "固定置頂",
+      "unpin": "取消釘選",
+      "tutorial": {
+        "title": "如何使用 CoLab",
+        "steps": [
+          "從左側導覽列選擇您想使用的 AI 工具。",
+          "您可以使用鍵盤快捷鍵 Cmd+K (或 Ctrl+K) 快速搜尋工具。",
+          "點擊工具卡片即可開始使用。"
+        ],
+        "tips": [
+          "CoLab 整合了多種強大的 Gemini 模型，涵蓋文字、圖片、影片與語音處理。"
+        ]
+      }
+    },
+    "chat": {
+      "title": "AI 聊天機器人",
+      "description": "進階推理與 Gemini Pro",
+      "tutorial": {
+        "title": "使用 AI 聊天機器人",
+        "steps": [
+          "在下方輸入框輸入您的問題或指令。",
+          "點擊左下角的圖片圖示可以上傳圖片，讓 AI 進行多模態分析。",
+          "按下 Enter 鍵或點擊發送按鈕送出訊息。"
+        ],
+        "tips": [
+          "此工具使用 Gemini 3.1 Pro 模型，具備強大的邏輯推理能力，適合處理複雜任務。",
+          "支援多輪對話，AI 會記住您之前的對話內容。"
+        ]
+      }
+    },
+    "agent": {
+      "title": "AI Agent",
+      "description": "自動化執行多步驟任務",
+      "tutorial": {
+        "title": "使用 AI Agent",
+        "steps": [
+          "輸入您想完成的複雜任務。",
+          "Agent 會自動呼叫合適的工具（如圖片生成、影片生成、網頁搜尋）來完成任務。",
+          "您可以隨時與 Agent 對話，調整任務細節。"
+        ],
+        "tips": [
+          "Agent 可以記住您的偏好，並根據上下文自動選擇最佳工具。"
+        ]
+      }
+    },
+    "batch-process": {
+      "title": "批次處理",
+      "description": "同時處理多個檔案或提示詞",
+      "systemPrompt": "全域提示詞 / 指令",
+      "systemPromptPlaceholder": "例如：總結這段文字，或描述這張圖片...",
+      "addText": "新增文字",
+      "addImages": "新增圖片",
+      "runBatch": "執行批次",
+      "exportCsv": "匯出 CSV",
+      "clearAll": "全部清除",
+      "status": {
+        "idle": "準備就緒",
+        "processing": "處理中...",
+        "success": "已完成",
+        "error": "錯誤"
+      },
+      "textPlaceholder": "在此輸入文字...",
+      "tutorial": {
+        "title": "如何使用批次處理",
+        "steps": [
+          "輸入適用於所有項目的全域提示詞。",
+          "新增文字項目或上傳圖片。",
+          "點擊「執行批次」自動處理所有項目。",
+          "完成後可將結果匯出為 CSV 檔案。"
+        ],
+        "tips": [
+          "您可以在同一個批次中混合文字和圖片項目。",
+          "系統會依序處理以確保穩定性。"
+        ]
+      }
+    },
+    "fast-chat": {
+      "title": "快速回覆",
+      "description": "使用 Flash Lite 快速解答",
+      "tutorial": {
+        "title": "使用快速回覆",
+        "steps": [
+          "輸入您的問題並發送。",
+          "AI 會以極快的速度為您提供解答。"
+        ],
+        "tips": [
+          "使用 Gemini 3.1 Flash Lite 模型，專為低延遲與高效率設計，適合簡單的問答與日常對話。"
+        ]
+      }
+    },
+    "search": {
+      "title": "搜尋增強",
+      "description": "提供最新的網路解答",
+      "tutorial": {
+        "title": "使用搜尋增強",
+        "steps": [
+          "輸入您想查詢的最新資訊或時事問題。",
+          "AI 會自動透過 Google 搜尋獲取最新資料，並整理成回答。",
+          "回答下方會附上參考來源連結，您可以點擊查看原始網頁。"
+        ],
+        "tips": [
+          "適合用來查詢天氣、新聞、體育賽事結果等需要即時資訊的問題。"
+        ]
+      }
+    },
+    "maps": {
+      "title": "地圖增強",
+      "description": "基於位置的智慧功能",
+      "tutorial": {
+        "title": "使用地圖增強",
+        "steps": [
+          "若瀏覽器詢問位置權限，請允許存取以獲得最佳體驗。",
+          "詢問與地點相關的問題，例如「附近有什麼好吃的義大利餐廳？」或「規劃台北一日遊」。",
+          "AI 會結合 Google Maps 資料提供精準的地點建議與評論摘要。"
+        ],
+        "tips": [
+          "回答中會包含 Google Maps 的地點連結，方便您直接導航或查看詳細資訊。"
+        ]
+      }
+    },
+    "image-understand": {
+      "title": "圖片分析",
+      "description": "使用 Pro 理解照片內容",
+      "tutorial": {
+        "title": "使用圖片分析",
+        "steps": [
+          "點擊上傳區域或拖曳圖片至該區域。",
+          "在提示詞輸入框中，告訴 AI 您想了解圖片的什麼資訊（例如：「這張圖片裡有什麼？」或「幫我翻譯圖片中的文字」）。",
+          "點擊「分析圖片」按鈕。"
+        ],
+        "tips": [
+          "支援高解析度圖片分析，適合用來辨識物體、讀取圖表數據或提取文字。"
+        ]
+      }
+    },
+    "image-gen": {
+      "title": "圖片生成",
+      "description": "使用 Nano Banana Pro 創作",
+      "tutorial": {
+        "title": "使用圖片生成",
+        "steps": [
+          "在提示詞輸入框中，詳細描述您想生成的圖片畫面（例如：「一隻戴著墨鏡的貓咪在海灘上衝浪，賽博龐克風格」）。",
+          "選擇您想要的長寬比（如 1:1, 16:9）與圖片解析度大小。",
+          "點擊「生成圖片」按鈕。"
+        ],
+        "tips": [
+          "提示詞越詳細，生成的圖片越符合您的期望。可以加入風格、光線、視角等描述。",
+          "此功能需要設定付費的 Google Cloud API 金鑰。"
+        ]
+      }
+    },
+    "edit-image": {
+      "title": "圖片編輯",
+      "description": "使用文字提示修改照片",
+      "tutorial": {
+        "title": "使用圖片編輯",
+        "steps": [
+          "上傳一張您想要編輯的原始圖片。",
+          "在提示詞中輸入您想進行的修改（例如：「把背景換成星空」或「在桌上加一個蘋果」）。",
+          "點擊「編輯圖片」按鈕。"
+        ],
+        "tips": [
+          "AI 會根據您的提示詞智慧地修改圖片，同時盡量保持原始圖片的其他部分不變。"
+        ]
+      }
+    },
+    "video-understand": {
+      "title": "影片分析",
+      "description": "從影片中提取洞察",
+      "tutorial": {
+        "title": "使用影片分析",
+        "steps": [
+          "上傳一段影片檔案（支援 mp4 等常見格式）。",
+          "輸入您想詢問關於這段影片的問題（例如：「影片中發生了什麼事？」或「總結這段演講的重點」）。",
+          "點擊「分析影片」按鈕。"
+        ],
+        "tips": [
+          "AI 能夠理解影片的畫面與聲音內容，適合用來快速總結長影片或尋找特定片段。"
+        ]
+      }
+    },
+    "video-gen": {
+      "title": "影片生成",
+      "description": "透過提示詞建立影片",
+      "tutorial": {
+        "title": "使用影片生成",
+        "steps": [
+          "輸入詳細的提示詞，描述您想生成的影片場景與動作。",
+          "（選填）您可以上傳一張圖片作為影片的起始畫面（首圖）。",
+          "點擊「生成影片」按鈕。影片生成可能需要幾分鐘的時間，請耐心等候。"
+        ],
+        "tips": [
+          "使用 Veo 3.1 模型，能夠生成高品質、流暢的動態影片。",
+          "此功能需要設定付費的 Google Cloud API 金鑰。"
+        ]
+      }
+    },
+    "youtube-gen": {
+      "title": "YouTube影片生成",
+      "description": "為 YouTube 建立專屬影片",
+      "tutorial": {
+        "title": "使用 YouTube影片生成",
+        "steps": [
+          "輸入詳細的提示詞，描述您想生成的 YouTube 影片內容。",
+          "選擇影片格式（標準 16:9 或 Shorts 9:16）。",
+          "選擇影片長度（5秒 或 12秒）。",
+          "點擊「生成 YouTube 影片」按鈕。"
+        ],
+        "tips": [
+          "12秒的影片需要進行兩次生成，因此需要較長的等待時間。",
+          "此功能需要設定付費的 Google Cloud API 金鑰。"
+        ]
+      }
+    },
+    "music-gen": {
+      "title": "音樂生成",
+      "description": "透過文字提示生成音樂",
+      "tutorial": {
+        "title": "使用音樂生成",
+        "steps": [
+          "輸入詳細的提示詞，描述您想生成的音樂風格與內容。",
+          "（選填）您可以上傳一張圖片作為音樂的靈感來源。",
+          "點擊「生成音樂」按鈕。"
+        ],
+        "tips": [
+          "使用 Lyria 3 模型，能夠生成高品質的音樂與人聲。",
+          "此功能需要設定付費的 Google Cloud API 金鑰。"
+        ]
+      }
+    },
+    "animate-image": {
+      "title": "圖片動畫",
+      "description": "將照片轉換為影片",
+      "tutorial": {
+        "title": "使用圖片動畫",
+        "steps": [
+          "上傳一張靜態圖片。",
+          "輸入提示詞描述您希望圖片如何動起來（例如：「雲朵飄動，水面波光粼粼」）。",
+          "點擊「生成動畫」按鈕。"
+        ],
+        "tips": [
+          "適合用來為靜態照片增添生命力，創造出微動態攝影（Cinemagraph）的效果。"
+        ]
+      }
+    },
+    "tts": {
+      "title": "文字轉語音",
+      "description": "生成自然語音",
+      "tutorial": {
+        "title": "使用文字轉語音",
+        "steps": [
+          "在文字框中輸入您想要轉換為語音的文字。",
+          "選擇一個您喜歡的語音聲音（例如：Puck, Kore 等）。",
+          "點擊「生成語音」按鈕。生成完成後即可播放或下載音訊檔。"
+        ],
+        "tips": [
+          "支援多種語言，生成的語音自然流暢，帶有豐富的情感與語氣。"
+        ]
+      }
+    },
+    "transcribe": {
+      "title": "語音轉文字",
+      "description": "將語音轉換為文字",
+      "tutorial": {
+        "title": "使用語音轉文字",
+        "steps": [
+          "您可以點擊麥克風圖示直接錄製語音，或點擊上傳圖示選擇電腦中的音訊檔案。",
+          "錄音或上傳完成後，點擊「語音轉文字」按鈕。",
+          "AI 會將音訊內容轉錄為文字並顯示在右側。"
+        ],
+        "tips": [
+          "使用 Gemini 3 Flash 模型，能夠快速且準確地辨識多種語言的語音內容。"
+        ]
+      }
+    },
+    "live-audio": {
+      "title": "即時對話",
+      "description": "即時語音互動",
+      "tutorial": {
+        "title": "使用即時對話",
+        "steps": [
+          "點擊「開始對話」按鈕並允許麥克風權限。",
+          "直接對著麥克風說話，AI 會即時聆聽並用語音回應您。",
+          "您可以隨時打斷 AI 的說話，就像與真人交談一樣。"
+        ],
+        "tips": [
+          "使用 Gemini Live API，提供極低延遲的語音互動體驗，非常適合用來練習外語或進行腦力激盪。"
+        ]
+      }
+    },
+    "reminders": {
+      "title": "管理通知",
+      "description": "設定即將到來的活動或新內容提醒",
+      "statusTitle": "通知狀態",
+      "statusEnabled": "通知功能已啟用。",
+      "statusDisabled": "請啟用通知以接收提醒。",
+      "btnEnable": "啟用通知",
+      "formTitle": "新增行程提醒",
+      "labelTitle": "提醒標題",
+      "placeholderTitle": "例如：團隊會議、查看新影片",
+      "labelDelay": "延遲（分鐘）",
+      "labelType": "類型",
+      "optEvent": "活動行程",
+      "optContent": "新內容",
+      "btnSubmit": "新增提醒",
+      "btnSimulate": "模擬「新內容」推播 (5秒後)",
+      "activeTitle": "進行中的提醒",
+      "noReminders": "目前沒有任何提醒事項",
+      "errNoSupport": "此瀏覽器不支援桌面通知功能。",
+      "errEnableFirst": "請先在瀏覽器設定中啟用通知權限。",
+      "alertNewContent": "全新內容已發布！",
+      "contentBody": "快來探索並使用最新的 AI 模型！",
+      "triggerAt": "觸發時間",
+      "deleteTitle": "取消提醒",
+      "tutorial_permission": "啟用通知功能以接收提醒事項。",
+      "tutorial_form": "在此處建立並排程您的新通知提醒。",
+      "tutorial": {
+        "title": "使用管理通知",
+        "steps": [
+          "點擊「啟用通知」以允許瀏覽器發送通知。",
+          "輸入提醒標題、延遲時間與類型，然後點擊「新增提醒」。",
+          "時間到時，您將會收到推播通知。"
+        ],
+        "tips": [
+          "確保您的瀏覽器與作業系統允許接收通知。"
+        ]
+      }
+    },
+    "admin": {
+      "title": "管理員面板",
+      "description": "使用者權限配置與系統級 API Co幣百分比消耗監控",
+      "errorLogsTab": "系統錯誤日誌",
+      "searchErrorsPlaceholder": "搜尋電子信箱、錯誤原因、請求工具...",
+      "colLogError": "錯誤訊息",
+      "noErrorsFound": "目前無任何相符的系統錯誤日誌。",
+      "severityCritical": "Critical / 權限或金鑰",
+      "severityWarning": "Warning / 暫時性或網路",
+      "severityInfo": "Info / 一般或常規錯誤",
+      "joinedDateFilter": "註冊日期篩選",
+      "startDate": "開始日期",
+      "endDate": "結束日期",
+      "clearDate": "清除",
+      "overviewTab": "數據大盤總覽",
+      "trendTitle": "大盤趨勢分析 (近 14 天)",
+      "trendDescription": "基於使用者與系統級 API 互動紀錄，實時運算每日活躍用戶 (DAU) 與算力 Co幣消耗之脈動。",
+      "dauTrend": "每日活躍用戶數 (DAU)",
+      "pointsTrend": "算力 Co幣消耗趨勢",
+      "pointsLabel": "消耗 Co幣"
+    },
+    "onboarding": {
+      "welcome": {
+        "title": "歡迎使用 CoLab",
+        "desc": "您的全功能 AI 協作工作區，旨在探索 Google 最新、最強大的 AI 技術。讓我們為您快速導覽。"
+      },
+      "tools": {
+        "title": "探索豐富工具",
+        "desc": "使用左側邊欄在不同功能之間切換，如：對話、影片生成、圖片編輯、音樂創作等。"
+      },
+      "canvas": {
+        "title": "無限創意協作畫布",
+        "desc": "全新推出的無限協作空間！您可以將先前生成或儲存的圖片、影片與聊天備忘，輕鬆拖入畫布中自由編排。雙擊直接編輯便利貼、拖曳擺放，並支援分享房間代碼即時多人協作！"
+      },
+      "coins": {
+        "title": "Co幣算力生態系",
+        "desc": "在 CoLab 中，每一項 AI 工具都由「Co幣」進行算力測算。您的專屬儀表板中提供清晰的帳單與點數追蹤，您甚至還可以免費額外解鎖算力來享受高速的創想旅程！"
+      },
+      "keys": {
+        "title": "設置 API 金鑰",
+        "desc": "部份進階功能需要自訂 Google Cloud API 金鑰。您可以在左下角的設定選單（齒輪圖標）中的「金鑰管理」安全地進行配置。"
+      },
+      "history": {
+        "title": "紀錄永不丟失",
+        "desc": "您產生的所有內容與對話紀錄都將自動保存。您可以隨時在歷史紀錄面板中找回，並接續您之前的進度。"
+      },
+      "getStarted": "開始體驗"
+    },
+    "tutorial": {
+      "chat": {
+        "modelSelector": "選擇您想使用的 AI 模型。不同的模型具備不同的運算能力。",
+        "history": "由此存取您之前的對話紀錄。",
+        "input": "在此輸入您的訊息。您也可以上傳圖片，讓 AI 進行多模態對話與分析。"
+      },
+      "liveAudio": {
+        "connect": "點擊此處建立連接，開始即時語音對話。"
+      },
+      "agent": {
+        "history": "在此查看您過去的 AI Agent 執行紀錄。",
+        "input": "在此描述您希望 AI Agent 執行的複雜多步驟任務。"
+      },
+      "videoGen": {
+        "prompt": "詳細描述您想生成的影片內容，文字描述越具體，生成效果越佳。",
+        "aspectRatio": "選擇生成影片的畫面比例。",
+        "submit": "點擊此處開始生成您的影片。此過程可能需要幾分鐘時間。"
+      },
+      "tts": {
+        "text": "輸入您想要轉換成語音的文字內容。",
+        "voice": "選擇您偏好的語音聲音風格。",
+        "submit": "點擊此處開始生成語音音檔。"
+      },
+      "imageGen": {
+        "prompt": "詳細描述您想生成的圖片細節。",
+        "aspectRatio": "為生成圖片選擇適合的畫面比例。",
+        "submit": "點擊此處開始生成圖片。"
+      },
+      "imageUnderstand": {
+        "upload": "上傳您想讓 AI 進行分析與解讀的圖片。",
+        "prompt": "針對此圖片向 AI 提出問題或給予特定指令。",
+        "submit": "點擊此處開始分析圖片內容。"
+      },
+      "videoUnderstand": {
+        "upload": "上傳您想讓 AI 進行分析與解讀的影片檔案。",
+        "prompt": "針對此影片向 AI 提出問題或給予特定指令。",
+        "submit": "點擊此處開始分析影片內容。"
+      },
+      "editImage": {
+        "upload": "上傳您想要進行編輯或修改的圖片。",
+        "prompt": "描述您想要如何編輯或修改該圖片（例如：添加背景、修改元素）。",
+        "submit": "點擊此處開始應用您的圖片編輯指令。"
+      },
+      "youtubeGen": {
+        "topic": "在此輸入您的 YouTube 影片主題或創作點子。",
+        "submit": "點擊此處生成完整的影片腳本與視覺資產。"
+      },
+      "animateImage": {
+        "upload": "上傳您想為其製作動態效果的靜態圖片。",
+        "prompt": "描述您希望該圖片呈現何種流體、運鏡或動畫動態。",
+        "submit": "點擊此處開始將圖片轉化為動態影片。"
+      },
+      "batchProcess": {
+        "upload": "上傳多張圖片或新增多筆文字項目進行批次處理。",
+        "prompt": "輸入要統一應用於所有批次項目的提示詞任務。",
+        "submit": "點擊此處開始多任務批次處理。"
+      },
+      "transcribe": {
+        "record": "點擊此處開始錄製您的語音內容。",
+        "upload": "或者，您可以上傳已有的本地語音/音訊檔案。",
+        "submit": "點擊此處開始執行語音轉文字與聽寫。"
+      },
+      "autofill_prompt": "說一個跟人工智慧(AI)有關的冷笑話，並用幽默的自嘲作結！",
+      "suggest": {
+        "title": "探索實作教學",
+        "desc": "只需 30 秒，帶您體驗首次的 AI 對話、功能控制，以及最棒的滿意度回饋追蹤！"
+      },
+      "btn": {
+        "start": "立即出發",
+        "later": "稍後再說",
+        "done": "開始遨遊 AI 世界"
+      },
+      "step1": {
+        "title": "第一步：前往智慧對話 💬",
+        "desc": "請點擊左側導覽列的「Chat (對話)」按鈕，或者點擊下方按鈕直接為您跳轉，展開第一次的高智慧交流。"
+      },
+      "step2": {
+        "title": "第二步：擬定任務 prompt 📝",
+        "desc": "在輸入框輸入你想委派給 AI 的指令。點擊下方按鈕可以為您自動代入一個有趣的幽默測試！"
+      },
+      "step3": {
+        "title": "第三步：傳送並執行使命 🚀",
+        "desc": "點擊輸入框右方的 Send 按鈕，或者按下鍵盤的 Enter 鍵。這時 AI 將會迅速解析並開始為您產生內容。"
+      },
+      "step_await": {
+        "title": "模型思考與回應中",
+        "desc": "強大的 Gemini 引擎正在構思最完美的內容，請稍等片刻... 當它完成後將自動跳轉到下一個關鍵步驟！"
+      },
+      "step4": {
+        "title": "第四步：品質回饋與列印 ⚖️",
+        "desc": "在 AI 的每一條回應或是生成的卡片底下，我們精心設計了「優質 / 不滿意」滿意度評價與「列印」對話按鈕。"
+      },
+      "complete": {
+        "title": "恭喜完成基礎特訓！",
+        "desc": "您已掌握了 CoLab AI Studio 最核心的操作 mechanics！"
+      }
+    }
+  }
+}

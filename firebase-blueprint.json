@@ -1,0 +1,193 @@
+{
+  "entities": {
+    "User": {
+      "title": "User",
+      "description": "User profile and preferences",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string" },
+        "email": { "type": "string", "format": "email" },
+        "displayName": { "type": "string" },
+        "photoURL": { "type": "string" },
+        "preferences": {
+          "type": "object",
+          "properties": {
+            "defaultModel": { "type": "string" }
+          }
+        },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["uid", "email", "createdAt"]
+    },
+    "HistoryItem": {
+      "title": "HistoryItem",
+      "description": "A record of a generation or interaction",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string" },
+        "tool": { "type": "string" },
+        "prompt": { "type": "string" },
+        "result": { "type": "string" },
+        "model": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["userId", "tool", "createdAt"]
+    },
+    "ChatSession": {
+      "title": "ChatSession",
+      "description": "A saved chat conversation",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string" },
+        "title": { "type": "string" },
+        "messages": { "type": "string" },
+        "model": { "type": "string" },
+        "featureId": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["userId", "title", "messages", "featureId", "createdAt", "updatedAt"]
+    },
+    "FeedbackItem": {
+      "title": "FeedbackItem",
+      "description": "User feedback on a generated generation output",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string" },
+        "toolId": { "type": "string" },
+        "contentId": { "type": "string" },
+        "rating": { "type": "string", "enum": ["up", "down"] },
+        "prompt": { "type": "string" },
+        "response": { "type": "string" },
+        "comment": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["userId", "toolId", "rating", "createdAt"]
+    },
+    "CanvasNode": {
+      "title": "CanvasNode",
+      "description": "An interactive dynamic node placed onto the Infinite Canvas",
+      "type": "object",
+      "properties": {
+        "workspaceId": { "type": "string" },
+        "type": { "type": "string", "enum": ["image", "video", "text"] },
+        "title": { "type": "string" },
+        "content": { "type": "string" },
+        "x": { "type": "number" },
+        "y": { "type": "number" },
+        "width": { "type": "number" },
+        "height": { "type": "number" },
+        "zIndex": { "type": "number" },
+        "creatorId": { "type": "string" },
+        "creatorName": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["workspaceId", "type", "title", "content", "x", "y", "creatorId", "creatorName", "createdAt", "updatedAt"]
+    },
+    "Organization": {
+      "title": "Organization",
+      "description": "An enterprise organization subscription",
+      "type": "object",
+      "properties": {
+        "orgId": { "type": "string" },
+        "name": { "type": "string" },
+        "ownerId": { "type": "string" },
+        "ownerEmail": { "type": "string", "format": "email" },
+        "maxSeats": { "type": "number" },
+        "assignedSeats": { "type": "number" },
+        "teamLimits": {
+          "type": "object",
+          "properties": {
+            "monthlyPoints": { "type": "number" }
+          }
+        },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["orgId", "name", "ownerId", "ownerEmail", "maxSeats", "assignedSeats", "createdAt"]
+    },
+    "OrgMember": {
+      "title": "OrgMember",
+      "description": "A seat or member within an enterprise organization",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string" },
+        "orgId": { "type": "string" },
+        "email": { "type": "string", "format": "email" },
+        "displayName": { "type": "string" },
+        "role": { "type": "string", "enum": ["owner", "admin", "member"] },
+        "pointsLimit": { "type": "number" },
+        "pointsUsed": { "type": "number" },
+        "addedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["uid", "orgId", "email", "role", "pointsLimit", "pointsUsed", "addedAt"]
+    },
+    "Scene3DPreset": {
+      "title": "Scene3DPreset",
+      "description": "Saved Three.js 3D studio scene configuration, material finish, lighting, and camera state",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string", "maxLength": 128 },
+        "name": { "type": "string", "minLength": 1, "maxLength": 80 },
+        "sceneType": { "type": "string", "enum": ["orrery", "pavilion", "turbine"] },
+        "materialFinish": { "type": "string", "enum": ["brass", "titanium", "ceramic", "cobalt", "jade"] },
+        "lightingPreset": { "type": "string", "enum": ["studio", "dusk", "arctic"] },
+        "explodeAmount": { "type": "number" },
+        "autoRotate": { "type": "boolean" },
+        "cameraPosition": { "type": "array" },
+        "cameraTarget": { "type": "array" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": [
+        "userId",
+        "name",
+        "sceneType",
+        "materialFinish",
+        "lightingPreset",
+        "explodeAmount",
+        "autoRotate",
+        "cameraPosition",
+        "cameraTarget",
+        "createdAt",
+        "updatedAt"
+      ]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": { "$ref": "#/entities/User" },
+      "description": "Stores user profiles and preferences"
+    },
+    "/history/{historyId}": {
+      "schema": { "$ref": "#/entities/HistoryItem" },
+      "description": "Stores generation history for each user"
+    },
+    "/chats/{chatId}": {
+      "schema": { "$ref": "#/entities/ChatSession" },
+      "description": "Stores chat conversations for each user"
+    },
+    "/feedback/{feedbackId}": {
+      "schema": { "$ref": "#/entities/FeedbackItem" },
+      "description": "Stores thumbs up/down feedback for AI generations"
+    },
+    "/canvas_nodes/{nodeId}": {
+      "schema": { "$ref": "#/entities/CanvasNode" },
+      "description": "Stores nodes representing assets placed on the infinite canvas"
+    },
+    "/organizations/{orgId}": {
+      "schema": { "$ref": "#/entities/Organization" },
+      "description": "Stores enterprise organization details and seat count plans"
+    },
+    "/organizations/{orgId}/members/{memberId}": {
+      "schema": { "$ref": "#/entities/OrgMember" },
+      "description": "Stores individual members/seats assigned inside an enterprise organization"
+    },
+    "/scenes_3d/{sceneId}": {
+      "schema": { "$ref": "#/entities/Scene3DPreset" },
+      "description": "Stores user-saved Three.js 3D scene studio presets"
+    }
+  }
+}

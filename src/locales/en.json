@@ -1,0 +1,406 @@
+{
+  "common": {
+    "aboutColab": "About CoLab",
+    "dbSynced": "Offline database synced",
+    "dbSyncing": "Syncing backup to local...",
+    "dbError": "Local sync failed",
+    "dbLoading": "Loading local database...",
+    "readyToHelp": "I'm ready to help",
+    "inputPlaceholderGemini": "Ask Gemini",
+    "share": "Share",
+    "searchTools": "Search tools...",
+    "searchGlobal": "Global Search",
+    "searchGlobalPlaceholder": "Search AI functions, tools, or chat histories...",
+    "searchGlobalPlaceholderShort": "Search tools, history...",
+    "voiceSearch": "Voice Search",
+    "listening": "Listening for voice command...",
+    "heard": "Recognized",
+    "voiceSelected": "Automatically selected",
+    "speechNotSupported": "Your browser does not support the Web Speech API. Please use Google Chrome for the full experience.",
+    "speechNotAllowed": "Please allow microphone permission to use voice search.",
+    "speechError": "Speech recognition error, please try again.",
+    "noToolsFound": "No tools found for '{{query}}'",
+    "provideFeedback": "Provide Feedback",
+    "tutorial": "Tutorial",
+    "submitFeedback": "Submit Feedback",
+    "submitting": "Submitting...",
+    "rateResponse": "Satisfied with this quality?",
+    "rateLike": "Good Quality",
+    "rateDislike": "Needs Improvement",
+    "qualityGood": "Good",
+    "qualityBad": "Unsatisfied",
+    "rateThanksLike": "Thank you for the appraisal! We will maintain this quality.",
+    "rateThanksDislike": "Feedback received. System will continue adjusting to improve results.",
+    "cancel": "Cancel",
+    "gotIt": "Got it",
+    "steps": "Steps",
+    "tips": "Tips",
+    "building": "Building...",
+    "login": "Login",
+    "logout": "Logout",
+    "loggingOut": "Logging out...",
+    "loggingIn": "Logging in...",
+    "welcomeBack": "Welcome Back",
+    "niceToSeeYou": "Nice to see you again ✨",
+    "goodbye": "We hate to see you go",
+    "hopeToSeeYou": "Hope to see you again 👋",
+    "pleaseWait": "Please wait",
+    "submit": "Submit",
+    "profile": "Profile",
+    "preferences": "Preferences",
+    "turboMode": "Turbo Mode",
+    "turboModeDesc": "Switch between high-fidelity visuals and high-performance rendering",
+    "save": "Save",
+    "language": "Language",
+    "back": "Back",
+    "backToDashboard": "Back to Dashboard",
+    "skip": "Skip",
+    "next": "Next",
+    "history": "History",
+    "recent": "Recent",
+    "recentActivity": "Recent Activity",
+    "noRecentActivity": "No recent activity yet.",
+    "justNow": "Just now",
+    "minsAgo": "{{count}}m ago",
+    "hoursAgo": "{{count}}h ago",
+    "daysAgo": "{{count}}d ago",
+    "chatTranscript": "Chat Session",
+    "clearHistory": "Clear History",
+    "searchHistory": "Search History",
+    "sidebarDynamic": {
+      "rarelyUsedTools": "Rarely Used AI",
+      "groupedHint": "Automatically collapsed based on low usage frequency",
+      "enableLabel": "Dynamic Sidebar Grouping",
+      "resetLabel": "Reset Usage Statistics",
+      "usageCount": "{{count}} uses",
+      "resetSuccess": "Usage statistics successfully reset"
+    },
+    "metricsWidget": {
+      "title": "Active AI Speed & Latency Meter",
+      "latencyLabel": "First Token Latency",
+      "tpsLabel": "Output Speed",
+      "seconds": "s",
+      "tpsUnit": "t/s",
+      "speedRating": "Speed Rating",
+      "extremelyFast": "Extremely Fast",
+      "standardFast": "Balanced Fast",
+      "deepInference": "Pro Inference",
+      "descPro": "Excellent reasoning complexity, heavy-duty processing queues",
+      "descFlash": "Outstanding responsiveness, ideal general-purpose utility",
+      "descLite": "Sub-pixel speeds, instantaneous real-time workflows",
+      "realtimeGenerating": "Live Generating...",
+      "activeTracking": "Active Stream Real-Time Metrics",
+      "historyRating": "Measured Baseline Average"
+    },
+    "mention": {
+      "header": "Reference AI Tools & Chat Sessions",
+      "noMatches": "No matching tools or chat history found",
+      "tip": "Press ↑/↓ to browse, Enter to select, Esc to close"
+    },
+    "all": "All",
+    "noHistory": "No history found",
+    "noSearchResults": "No search results",
+    "downloadChat": "Export Chat",
+    "exportBackup": "Local Backup",
+    "selectFormat": "Export Format",
+    "exportJson": "JSON Backup (.json)",
+    "exportJsonDesc": "Full structured session & metadata",
+    "exportText": "Plain Text (.txt)",
+    "exportTextDesc": "Clean readable text transcript",
+    "exportMarkdown": "Markdown (.md)",
+    "exportMarkdownDesc": "Formatted headings & links",
+    "exportSuccess": "Chat backup exported",
+    "pinMessage": "Pin message",
+    "unpinMessage": "Unpin message",
+    "pinnedBadge": "Pinned",
+    "pinnedMessages": "Pinned Messages",
+    "jumpToMessage": "Jump to message",
+    "clearChat": "Clear Chat",
+    "noHistoryFilter": "No history for this filter",
+    "imageGen": {
+      "model": "Model",
+      "modelImagen": "Imagen 3.0 (Generate)",
+      "modelGeminiFlash": "Gemini 3.1 Flash Image Preview (Fast)",
+      "modelGeminiPro": "Gemini 3.0 Pro Image Preview (High Quality)",
+      "promptGuidance": "Tip: Be specific about the subject, style, lighting, camera angle, and mood for better results. (e.g., \"A hyper-realistic close-up portrait of a cyberpunk fox, neon rim lighting, cinematic 85mm lens, atmospheric mist\")"
+    }
+  },
+  "categories": {
+    "Overview": "Overview",
+    "Text & Chat": "Text & Chat",
+    "Image": "Image",
+    "Video": "Video",
+    "Audio": "Audio"
+  },
+  "features": {
+    "three-d-studio": {
+      "title": "3D Scenes Studio",
+      "description": "Interactive PBR lighting, exploded views, and cloud scene presets",
+      "tutorial": {
+        "title": "Using the 3D Scenes Studio",
+        "steps": [
+          "Switch between the Kinetic Orrery, Pavilion of Light, and Aero Turbofan Rig in the bottom dock.",
+          "Drag to orbit, scroll to zoom, and click any mechanical or architectural sub-assembly to inspect it.",
+          "Slide Explode to separate parts smoothly, and test physical material finishes and lighting moods.",
+          "Open Presets to save or restore your camera pose, finish, and lighting setup."
+        ],
+        "tips": [
+          "Press H anytime to collapse or expand the control dock for an unobstructed 3D view."
+        ]
+      }
+    },
+    "analytics": {
+      "title": "Usage & Compute Analytics",
+      "description": "View Co-coin spending trends and AI models usage statistics"
+    },
+    "chat": {
+      "title": "AI Assistant",
+      "description": "Chat with Gemini"
+    },
+    "agent": {
+      "title": "AI Agent",
+      "description": "Automate multi-step tasks with tools"
+    },
+    "batch-process": {
+      "title": "Batch Processing",
+      "description": "Process multiple files"
+    },
+    "fast-chat": {
+      "title": "Fast Chat",
+      "description": "Quick answers"
+    },
+    "search": {
+      "title": "Search",
+      "description": "Search with AI"
+    },
+    "maps": {
+      "title": "Maps",
+      "description": "Location based AI"
+    },
+    "image-understand": {
+      "title": "Image Understanding",
+      "description": "Analyze images"
+    },
+    "image-gen": {
+      "title": "Image Generation",
+      "description": "Create images"
+    },
+    "edit-image": {
+      "title": "Edit Image",
+      "description": "Modify images"
+    },
+    "video-gen": {
+      "title": "Video Generation",
+      "description": "Create videos"
+    },
+    "youtube-gen": {
+      "title": "YouTube Gen",
+      "description": "Create YouTube videos"
+    },
+    "animate-image": {
+      "title": "Animate Image",
+      "description": "Bring images to life"
+    },
+    "video-understand": {
+      "title": "Video Understanding",
+      "description": "Analyze videos"
+    },
+    "music-gen": {
+      "title": "Music Generation",
+      "description": "Generate music from text"
+    },
+    "tts": {
+      "title": "Text to Speech",
+      "description": "Convert text to audio"
+    },
+    "transcribe": {
+      "title": "Transcribe",
+      "description": "Audio to text"
+    },
+    "live-audio": {
+      "title": "Live Audio",
+      "description": "Real-time voice chat"
+    },
+    "reminders": {
+      "title": "Manage Notifications",
+      "description": "Configure upcoming events or new content notifications",
+      "statusTitle": "Notification Status",
+      "statusEnabled": "Notifications are enabled.",
+      "statusDisabled": "Please enable notifications to receive reminders.",
+      "btnEnable": "Enable Notifications",
+      "formTitle": "Schedule Reminder",
+      "labelTitle": "Reminder Title",
+      "placeholderTitle": "e.g., Team Meeting, Check new video",
+      "labelDelay": "Delay (minutes)",
+      "labelType": "Type",
+      "optEvent": "Upcoming Event",
+      "optContent": "New Content",
+      "btnSubmit": "Add Reminder",
+      "btnSimulate": "Simulate \"New Content\" Alert (5s)",
+      "activeTitle": "Active Reminders",
+      "noReminders": "No active reminders",
+      "errNoSupport": "This browser does not support desktop notifications.",
+      "errEnableFirst": "Please enable notifications first.",
+      "alertNewContent": "New Content Available!",
+      "contentBody": "Check out the new AI models!",
+      "triggerAt": "Triggers at",
+      "deleteTitle": "Cancel reminder",
+      "tutorial_permission": "Enable notifications to receive reminders.",
+      "tutorial_form": "Create a new reminder here."
+    },
+    "admin": {
+       "title": "Admin Panel",
+       "description": "User permission settings and system API consumption monitoring",
+       "errorLogsTab": "Error Logs",
+       "searchErrorsPlaceholder": "Search by email, error cause, or tool...",
+       "colLogError": "Error Details",
+       "noErrorsFound": "No matching system error logs found.",
+       "severityCritical": "Critical / Permission & Credentials",
+       "severityWarning": "Warning / Temp or Timeout",
+       "severityInfo": "Info / General Failure",
+       "joinedDateFilter": "Joined Between",
+       "startDate": "Start Date",
+       "endDate": "End Date",
+       "clearDate": "Clear",
+       "overviewTab": "Overview Trends",
+       "trendTitle": "Overview Trend Analysis (Past 14 Days)",
+       "trendDescription": "Daily Active Users (DAU) and total token/point API consumption metrics computed in real-time.",
+       "dauTrend": "Daily Active Users (DAU)",
+       "pointsTrend": "Points Consumption Trend",
+       "pointsLabel": "Points Used"
+    }
+  },
+  "dashboard": {
+    "heroTitle1": "Welcome to",
+    "heroTitle2": "CoLab",
+    "heroSubtitle": "Explore the power of AI",
+    "takeTour": "Watch Quick Introduction",
+    "pinnedTools": "⭐ Pinned Shortcuts",
+    "pin": "Pin to Top",
+    "unpin": "Unpin"
+  },
+  "onboarding": {
+    "welcome": {
+      "title": "Welcome to CoLab",
+      "desc": "Your all-in-one workspace for exploring Google's latest AI models. Let's take a quick tour to get you started."
+    },
+    "tools": {
+      "title": "Explore the Tools",
+      "desc": "Use the sidebar to navigate between different features like Chat, Video Generation, Image Editing, and more."
+    },
+    "canvas": {
+      "title": "Infinite Creative Canvas",
+      "desc": "Our newest flagship feature! Easily drag-and-drop previously generated images, videos, and chat snippets straight onto an infinite board, customize sticky notes, and connect the dots with real-time room codes."
+    },
+    "coins": {
+      "title": "CoCoins Quota system",
+      "desc": "Every AI task uses CoCoins on our shared-compute network. Track usage directly via your Dashboard, and upgrade or claim free rewards to keep your momentum going."
+    },
+    "keys": {
+      "title": "Secure Your API Keys",
+      "desc": "Some advanced features require a Google Cloud API key. You can set this up securely in the Settings menu (gear icon) under Secrets."
+    },
+    "history": {
+      "title": "Never Lose Your Work",
+      "desc": "Your generated content and chat conversations are automatically saved to your History, so you can always pick up where you left off."
+    },
+    "getStarted": "Get Started"
+  },
+  "tutorial": {
+    "chat": {
+      "modelSelector": "Select the AI model you want to use. Different models have different capabilities.",
+      "history": "Access your past chat conversations here.",
+      "input": "Type your message here. You can also upload images for multimodal analysis."
+    },
+    "liveAudio": {
+      "connect": "Click here to connect and start real-time live audio conversation."
+    },
+    "agent": {
+      "history": "View your past AI Agent execution history here.",
+      "input": "Describe the complex multi-step tasks you want the AI Agent to execute."
+    },
+    "videoGen": {
+      "prompt": "Describe the video content you want to generate in detail. More specific prompts lead to better results.",
+      "aspectRatio": "Select the aspect ratio for the generated video.",
+      "submit": "Click here to generate your video. This process can take a few minutes."
+    },
+    "tts": {
+      "text": "Enter the text you want to convert to speech.",
+      "voice": "Select your preferred voice style.",
+      "submit": "Click here to generate the speech audio."
+    },
+    "imageGen": {
+      "prompt": "Describe the image you want to generate in detail.",
+      "aspectRatio": "Select the aspect ratio for the generated image.",
+      "submit": "Click here to generate the image."
+    },
+    "imageUnderstand": {
+      "upload": "Upload an image you want the AI to analyze and interpret.",
+      "prompt": "Ask questions or give instructions about the uploaded image.",
+      "submit": "Click here to analyze the image content."
+    },
+    "videoUnderstand": {
+      "upload": "Upload a video file you want the AI to analyze and interpret.",
+      "prompt": "Ask questions or give instructions about the uploaded video.",
+      "submit": "Click here to analyze the video content."
+    },
+    "editImage": {
+      "upload": "Upload the image you want to edit or modify.",
+      "prompt": "Describe how you want to edit or modify the image (e.g., add background, change element).",
+      "submit": "Click here to apply your image editing instructions."
+    },
+    "youtubeGen": {
+      "topic": "Enter your YouTube video theme or raw creative idea here.",
+      "submit": "Click here to generate the complete script and visual assets."
+    },
+    "animateImage": {
+      "upload": "Upload the static image you want to animate.",
+      "prompt": "Describe the motion, camera action, or animation stream you want for the image.",
+      "submit": "Click here to convert the image to video."
+    },
+    "batchProcess": {
+      "upload": "Upload multiple images or add multiple text lines to batch process.",
+      "prompt": "Enter the common prompt task to be applied across all batch items.",
+      "submit": "Click here to begin multi-task batch processing."
+    },
+    "transcribe": {
+      "record": "Click here to start recording your voice.",
+      "upload": "Or upload an existing local audio/voice file.",
+      "submit": "Click here to begin voice transcription and dictation."
+    },
+    "autofill_prompt": "Tell me a short joke about AI, and conclude with a funny self-deprecating comment!",
+    "suggest": {
+      "title": "Interactive Tutorial Walkthrough",
+      "desc": "In just 30 seconds, experience your first AI interaction, interface control, and our state-of-the-art satisfaction feedback tracker!"
+    },
+    "btn": {
+      "start": "Start Walkthrough",
+      "later": "Maybe Later",
+      "done": "Begin Exploring"
+    },
+    "step1": {
+      "title": "Step 1: Go to Chat Interface 💬",
+      "desc": "Click 'Chat' in the sidebar, or click the button below to jump straight in and begin your high-intelligence chat conversation."
+    },
+    "step2": {
+      "title": "Step 2: Define your prompt 📝",
+      "desc": "Type what you'd like Gemini to complete for you. Click the button below to autofill a playful demo query!"
+    },
+    "step3": {
+      "title": "Step 3: Send and process 🚀",
+      "desc": "Click the Send button or hit Enter to submit. Gemini will immediately analyze your prompt and begin crafting its response."
+    },
+    "step_await": {
+      "title": "Gemini is thinking...",
+      "desc": "The powerful Gemini engine is designing the perfect response. Please wait, we will proceed automatically once it's ready!"
+    },
+    "step4": {
+      "title": "Step 4: Quality Feedback & Printing ⚖️",
+      "desc": "Under every response, we've designed rating buttons to track satisfaction, along with a custom 'Print' button to easily print or print-to-pdf."
+    },
+    "complete": {
+      "title": "Congrats! You're a pro! 🌟",
+      "desc": "You've successfully mastered the key mechanics of CoLab. We've added +50 free Co-Coins to your account quota!"
+    }
+  }
+}

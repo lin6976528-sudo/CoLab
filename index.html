@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CoLab</title>
+    <meta name="description" content="A comprehensive suite of AI tools powered by Gemini, including chat, image generation, video generation, and audio processing." />
+    <meta property="og:title" content="CoLab" />
+    <meta property="og:description" content="A comprehensive suite of AI tools powered by Gemini, including chat, image generation, video generation, and audio processing." />
+    <script>
+      (function() {
+        try {
+          var turbo = localStorage.getItem('colab_turbo_mode') === 'true' || localStorage.getItem('colab_performance_mode') === 'extreme';
+          if (turbo) {
+            document.documentElement.classList.add('turbo-mode');
+          }
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+
